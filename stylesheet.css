@@ -5,7 +5,7 @@ div{
 
 .p1{
    width: 50px;
-   color: #0000ab;
+   background-color: #0000ab;
    height: 50px;
    border: 2px solid black;
    margin: 10px;
@@ -13,7 +13,7 @@ div{
 
 .p2{
    width: 50px;
-   color: #0000af;
+   background-color: #0000af;
    height: 50px;
    border: 2px solid black;
   margin: 10px;
@@ -21,7 +21,7 @@ div{
 
 .p3{
    width: 50px;
-   color: #0000ff;
+   background-color: #0000ff;
    height: 50px;
    border: 2px solid black;
    margin: 10px;
@@ -29,7 +29,7 @@ div{
 
 .p4{
    width: 50px;
-   color: #0000fa;
+   background-color: #0000fa;
    height: 50px;
    border: 2px solid black;
    margin: 10px;
