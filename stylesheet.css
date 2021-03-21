@@ -1,14 +1,36 @@
-p.p1 {
-	  margin: 0px;
-      background-color: #00bbff;
-	  border: 2px;
-	  color: blue;
-	  border-width: 5px;
-	  border-color: red;
-} 
+div{
+   background-color: #1122ff;
+}
 
-// p.p2{
-	border-width: 5px;
-	border-color: red;
-	padding: 0px 0px 0px 10px;
+
+.p1{
+   width: 50px;
+   color: #0000ab;
+   height: 50px;
+   border-width: 2px;
+   margin: 10px;
+}
+
+.p2{
+   width: 50px;
+   color: #0000af;
+   height: 50px;
+   border-width: 2px;
+  margin: 10px;
+}
+
+.p3{
+   width: 50px;
+   color: #0000ff;
+   height: 50px;
+   border-width: 2px;
+   margin: 10px;
+}
+
+.p4{
+   width: 50px;
+   color: #0000fa;
+   height: 50px;
+   border-width: 2px;
+   margin: 10px;
 }
