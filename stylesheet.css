@@ -1,7 +1,9 @@
 div{
    background-color: #32AA9B;
 }
-
+p {
+ width: 50%;
+}
 
 .p1{
    width: 50px;
