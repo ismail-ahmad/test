@@ -1,23 +1,33 @@
 <!doctype html>
-<html lang='en-gb'>
-   <head>
-	  <meta charset='utf-8'>
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	   <style>
-	     * {
-          box-sizing: border-box;
-          margin: 0px;
-	   }
+<html lang="en">
+  <head>
+     <meta charset="utf-8">
+	 <meta 
+	 name ="viewport" content=" width=device-width, initial-scale=1.0">
+  <style>
+	 * {
+	 margin: 0px;
+	 }
+	 div>div:hover {
+	  background-color:blue;
+	  color: white;
+	  cursor: default;
+	  text: 20px;
+	  top: 15px;
+	 }
+	 p {
+	  font-size: 24px;
+	  text-align: center;
+	  color: blue;
+	  margin-top:19px;
+	 }
 	 </style>
-	  <link rel="stylesheet" href="stylesheet.css">
-   	  <title>Hello Coursera!</title>
-   </head>
-   <body>
-     <div>
-	 <p class="p1"></p>
-	 <p class="p2"></p>
-         <p class="p3"></p>
-	 <p class="p4"></p>
-     </div>
-   </body>
+  </head>
+  <body>
+  
+<div><div onmouseenter="fun();" onmouseleave="fun2();" id="demo" style=" box-sizing: border-box; padding-top: 5px; height: 34px; border-radius: 16px; margin-top: 3px; border:1px solid black; width:50%; text-align: center; margin-left: 25%; margin-right: 25%;"><b><i>hello</i></b></div>
+</div>
+<p id="content"><p/>
+<script src="javascript.js"></script>
+  </body>
 </html>
