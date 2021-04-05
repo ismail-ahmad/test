@@ -39,6 +39,10 @@
 	  font-style: oblique;
 	  background-color: white;
 	 }
+	  .input-text {
+	   color: white;
+	   text-size: 2em;
+	  }
 	 </style>
   </head>
   <body>
@@ -46,8 +50,8 @@
 <div onmouseenter="fun();" onmouseleave="fun2();" id="demo" style=" box-sizing: border-box; padding-top: 5px; height: 34px; border-radius: 16px; margin-top: 3px; width:50%; text-align: center; margin-left: 25%; margin-right: 25%;"><b><i>hello</i></b></div>
 	  <p id="content"></p>
 	  <form action="mailto:ismailahmad0505@gmail.com" method="post">
-	        <p>Name:&nbdp;</p><input type="text" name="name" maxlength="45">
-	        <p>Favorite Movie:&nbdp;</p>
+	        <p class="input-text">Name: &nbdp;</p><input type="text" name="name" maxlength="45">
+	        <p class="input-text">Favorite Movie: &nbdp;</p>
 		<input type="radio" name="movie" value="UP">
 	        <input type="radio" name="movie" value="Toy story">
 		<input type="radio" name="movie" value="Kung fu panda">
@@ -60,7 +64,7 @@
 	document.getElementById("content").style.border = "1px solid blue" ;
 	document.getElementById("content").style.width = "50%" ;
 	document.getElementById("content").style.marginLeft = "25%" ;
-    document.getElementById("content").style.marginRight = "25%" ;
+        document.getElementById("content").style.marginRight = "25%" ;
 	document.getElementById("content").style.borderRadius = "5px" ;
 }
 function fun2(){
