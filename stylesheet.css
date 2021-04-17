@@ -1,38 +1,31 @@
-div{
-   background-color: #32AA9B;
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+
+body {
+    background-color: hsla(190, 53%, 69%, 0.575);
+    font-size: 16px;
+    color: hsl(157, 30%, 29%);
+    font-family: sans-serif;
+}
+h1{
+    border: 5px solid rgba(66, 194, 130, 0.705);
+    text-align: center;
+    width: 50%;
+    border-radius: 12px;
+    color: hsl(157, 30%, 29%);
+    margin: 0px 25% 0px 25%;
+    font-family: Tangerine;
+    font-size: 48px;
 }
 p {
- width: 50%;
+    margin-top: 10px;
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 5px;
 }
 
-.p1{
-   width: 50px;
-   background-color: #0000ab;
-   height: 50px;
-   border: 1px solid black;
-   margin: 10px;
-}
-
-.p2{
-   width: 50px;
-   background-color: #0000af;
-   height: 50px;
-   border: 1px solid black;
-  margin: 10px;
-}
-
-.p3{
-   width: 50px;
-   background-color: #0000ff;
-   height: 50px;
-   border: 1px solid black;
-   margin: 10px;
-}
-
-.p4{
-   width: 50px;
-   background-color: #0000fa;
-   height: 50px;
-   border: 1px solid black;
-   margin: 10px;
-}
