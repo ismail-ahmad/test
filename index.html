@@ -1,69 +1,16 @@
 <!doctype html>
-<html lang="en">
-  <head>
-     <meta charset="utf-8">
-	 <meta name ="viewport" content=" width=device-width, initial-scale=1.0">
-	  <meta name="description" content="This is a website only for testing, this is not for any other purposes. contact me on my email if you have any query">
-	  <meta http-equiv="cache-control" name="private">
-	  <link rel="canonical" href="https://ismail-ahmad.github.io/test/">
-	  <title>Hello!</title>
-	  
-  <style>
-	 * {
-	    box-sizing: border-box;
-	    margin: 0px;
-	 }
-	  body{
-	    background-image: url('dark-blue.webp');
-	    background-repeat: no-repeat;
-	    background-attachment: fixed;
-	    background-size: 100% 100%;
-	  }
-	 div {
-	    border: 1px solid black;
-	    background-color: white;
-	    color: #6fda44;
-	 }
-	 div:hover {
-	  background-color:blue;
-      border:1px solid blue;
-	  color: white;
-	  cursor: default;
-	 }
-	 #content {
-	  font-size: 24px;
-	  text-align: center;
-	  color: blue;
-	  margin-top:19px;
-	  font-style: oblique;
-	  background-color: white;
-	 }
-	  .input-text {
-	   color: white;
-	   size: 40px;
-	  }
-	 </style>
-  </head>
-  <body>
-  
-<div onmouseenter="fun();" onmouseleave="fun2();" id="demo" style=" box-sizing: border-box; padding-top: 5px; height: 34px; border-radius: 16px; margin-top: 3px; width:50%; text-align: center; margin-left: 25%; margin-right: 25%;"><b><i>hello</i></b></div>
-	  <p id="content"></p>
-<script>
-	function fun(){
-	var hello = "Hello there!";
-	document.getElementById("content").innerHTML = hello;
-	document.getElementById("content").style.border = "1px solid blue" ;
-	document.getElementById("content").style.width = "50%" ;
-	document.getElementById("content").style.marginLeft = "25%" ;
-        document.getElementById("content").style.marginRight = "25%" ;
-	document.getElementById("content").style.borderRadius = "5px" ;
-}
-function fun2(){
-	var mouseleave = "";
-	document.getElementById("content").innerHTML = mouseleave;
-	document.getElementById("content").style.border = "hidden" ;
-	
-}  
-</script>
- </body>
+<html>
+	<head>
+		<title>Syntax</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="This is the homepage of my website SYNTAX, I hope you like my website theme and have a good user experience."> 
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="stylesheet.css">
+	</head>
+	<body>
+		<h1>Page h1 heading</h1>
+		<p>This is the adjacent paragraph to the h1 heading. Its font family is arial but we want to change it so we are gonne apply font-family property to this paragraph element.</p>
+	</body>
 </html>
