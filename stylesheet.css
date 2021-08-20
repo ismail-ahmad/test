@@ -2,9 +2,6 @@
     box-sizing: border-box;
     margin: 0px;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
-
 body {
     background-color: hsla(190, 53%, 69%, 0.575);
     font-size: 16px;
