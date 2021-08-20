@@ -9,7 +9,7 @@ body {
     font-family: sans-serif;
 }
 h1{
-    border: 5px solid rgba(66, 194, 130, 0.705);
+    border: 3px solid rgba(66, 194, 130, 0.705);
     text-align: center;
     width: 50%;
     border-radius: 12px;
@@ -21,8 +21,11 @@ h1{
 p {
     margin-top: 10px;
     width: 70%;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: auto;
+    margin-left: auto;
     padding: 5px;
 }
-
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
