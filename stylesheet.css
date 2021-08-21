@@ -8,26 +8,3 @@ body {
     color: hsl(157, 30%, 29%);
     font-family: sans-serif;
 }
-h1{
-    border: 3px solid rgba(66, 194, 130, 0.705);
-    text-align: center;
-    width: 50%;
-    border-radius: 12px;
-    color: hsl(157, 30%, 29%);
-    margin: 0px 25% 0px 25%;
-    font-family: Tangerine;
-    font-size: 48px;
-}
-p {
-    margin-top: 10px;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px;
-}
-img{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    overflow-x: hidden;
-}
