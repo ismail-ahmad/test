@@ -1,40 +1,83 @@
-<!doctype html>
-<html lang="en-US">
-	<head>
-		<title>Syntax</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="This is the homepage of my website SYNTAX, I hope you like my website theme and have a good user experience.">
-		<link rel="preload" as="image" href="dark-blue.webp">
-		<link rel="preload" as="font" href="https://fonts.googleapis.com/css2?family=Tangerine&display=swap">
-		<style>
-            @import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
-		    *{box-sizing:border-box;margin:0px;}
-*,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
-        </style>
-		<link rel="preload" href="stylesheet.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-                <noscript><link rel="stylesheet" href="stylesheet.css"></noscript>
-    </head>
-	<body>
-		<h1 style="
-    border: 3px solid rgba(66, 194, 130, 0.705);
-    text-align: center;
-    width: 50%;
-    border-radius: 12px;
-    color: hsl(157, 30%, 29%);
-    margin: 0px 25% 0px 25%;
-    font-family: Tangerine;
-    font-size: 48px;">Page h1 heading</h1>
-		<p style="margin-top: 10px;
-    width: 90%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 5px;">This is the adjacent paragraph to the h1 heading. Its font family is arial but we want to change it so we are gonne apply font-family property to this paragraph element.</p>
-	        <img src="dark-blue.webp" height="250" width="375" style="
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    overflow-x: hidden;
-" alt="Dark blueish colored room with wooden floor and some light coming through window" title="Dark room">
-	</body>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,
+	initial-scale=1.0">
+	<title>Beautiful Background Colors</title>
+<style>
+	*{
+		box-sizing: border-box;
+		padding: 0px;
+		margin: 0px;
+	}
+body{
+	background-image: linear-gradient(127deg, rgb(241, 173, 173) , rgba(0, 0, 0, 0)   70.71%),
+	                  linear-gradient(217deg, rgb(0, 255, 242),    rgba(0, 0, 255, 0) 70.71%),
+	                  linear-gradient(336deg, rgb(0, 0, 255),      rgba(255, 0, 0, 0) 70.71%);
+	background-attachment: fixed;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	color: rgb(36, 36, 109);
+	}
+	h1{
+		text-align: center;
+		font-size: 2rem;
+		background-color: rgba(255, 255, 255, 0.253);
+		width: 80%;
+		border-radius: 0px 10px;
+		margin: 0 auto;
+	}
+	p{
+		width: 400px;
+		text-align: justify;
+		transition: transform 1s ease;
+		margin: 40px auto;
+	}
+	p:hover{
+		transform: scaleX(0.8);
+	}
+	p~div{
+		border: 1px solid black;
+	}
+	div.one{
+		white-space: pre;
+		text-align: center;
+		margin: 10px auto 10px auto;
+		padding: 20px 0 20px 0;
+		width: 80%;
+		background-color: rgba(255, 255, 255, 0.233);
+		border-radius: 0 10px;
+	}
+</style>
+</head>
+<body>
+	<div class="heading"><h1>Daffodils</h1></div>
+<div class="one">I wandered lonely as a cloud
+That floats on high o'er vales and hills,
+When all at once I saw a crowd,
+A host, of golden daffodils;
+Beside the lake, beneath the trees,
+Fluttering and dancing in the breeze.
+
+Continuous as the stars that shine
+And twinkle on the milky way,
+They stretched in never-ending line
+Along the margin of a bay:
+Ten thousand saw I at a glance,
+Tossing their heads in sprightly dance.
+
+The waves beside them danced; but they
+Out-did the sparkling waves in glee:
+A poet could not but be gay,
+In such a jocund company:
+I gazed—and gazed—but little thought
+What wealth the show to me had brought:
+
+For oft, when on my couch I lie
+In vacant or in pensive mood,
+They flash upon that inward eye
+Which is the bliss of solitude;
+And then my heart with pleasure fills,
+And dances with the daffodils.</div>
+</body>
 </html>
