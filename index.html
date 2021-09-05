@@ -27,18 +27,6 @@ body{
 		border-radius: 0px 10px;
 		margin: 0 auto;
 	}
-	p{
-		width: 400px;
-		text-align: justify;
-		transition: transform 1s ease;
-		margin: 40px auto;
-	}
-	p:hover{
-		transform: scaleX(0.8);
-	}
-	p~div{
-		border: 1px solid black;
-	}
 	div.one{
 		white-space: pre;
 		text-align: center;
@@ -47,6 +35,11 @@ body{
 		width: 80%;
 		background-color: rgba(255, 255, 255, 0.233);
 		border-radius: 0 10px;
+	}
+	@media screen and (max-width: 600px){
+		h1, div.one{
+			width: 90%;
+		}
 	}
 </style>
 </head>
