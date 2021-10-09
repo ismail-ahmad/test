@@ -1,89 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,
-	initial-scale=1.0">
-	<title>Poem: Daffodils</title>
-	<preload as="font" href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap">
-<style>
-	@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap');
-	*{
-		box-sizing: border-box;
-		padding: 0px;
-		margin: 0px;
-	}
-body{
-	background-image: linear-gradient(127deg, rgb(241, 173, 173) , rgba(0, 0, 0, 0)   70.71%),
-	                  linear-gradient(217deg, rgb(0, 255, 242),    rgba(0, 0, 255, 0) 70.71%),
-	                  linear-gradient(336deg, rgb(0, 0, 255),      rgba(255, 0, 0, 0) 70.71%);
-	background-attachment: fixed;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	color: rgb(36, 36, 109);
-	color: rgb(0, 0, 0);
-	}
-	h1{
-		text-align: center;
-		font-size: 2rem;
-		background-color: rgba(255, 255, 255, 0.253);
-		width: 80%;
-		border-radius: 0px 10px;
-		font-family: 'Kaisei Tokumin', serif;
-		margin: 0 auto;
-	}
-	div.one{
-		white-space: pre;
-		text-align: center;
-		margin: 10px auto 10px auto;
-		padding: 20px 0 20px 0;
-		width: 80%;
-		background-color:rgba(255, 255, 255, 0.356);
-		font-family: 'Kaisei Tokumin', serif;
-		border-radius: 0 10px;
-		height: 965px;
-	}
-	@media (max-width: 600px){
-		h1, div.one{
-			width: 90%;
-		}
-	}
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Layout</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    :root{
+      font: italic small-caps normal 1em calibri;
+      color: black;
+    }
+    ::selection{
+      color: white;
+      background-color: darkblue;
+    }
+    .grid-container{
+      display: grid;
+      grid-template: "h h h h h h h h h h h h" minmax(100px, auto)
+                     "n n n n n n n n n n n n" minmax(50px, auto)
+                     "a1 a1 m m m m m m m m a2 a2" minmax(50px, auto)
+                     'f f f f f f f f f f f f' minmax(150px, auto)
+                     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .header{grid-area: h; background-color: lightblue; text-align: center; display:flex; justify-content: center; align-items: center;}
+    .nav{grid-area: n; background-color: lightcoral;}
+    .main{grid-area: m; background-color: lightcyan; }
+    .aside1{grid-area: a1; background-color: lightseagreen; color: white;}
+    .aside2{grid-area: a2; background-color: lightseagreen; color: white;}
+    .footer{grid-area: f; background-color: mediumaquamarine; color: white; text-align: center; display:flex; justify-content: center; align-items: center;}
+    .grid-container > div{
+    }
+    .content{
+      color: initial;
+      font-variant: initial;
+      font-style: initial;
+      padding: 5px;
+      background-color: black;
+      color: rgb(138, 158, 248);
+    }
+    h1{
+      font: italic small-caps normal 32px calibri;
+    }
+    .content p{
+      margin: 10px 0;
+    }
+    @media screen and (max-width:700px){
+      .grid-container{
+      display: grid;
+      grid-template: "h h h h h h h h h h h h" minmax(60px , auto)
+                     "h h h h h h h h h h h h" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     "m m m m m m m m m m m m" minmax(60px , auto)
+                     'f f f f f f f f f f f f' minmax(60px , auto)
+                     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .aside1, .aside2{
+      display: none;
+    }
+    .nav{
+      display: none;
+    }
+    }
+    .pictures{
+      text-align: left;
+    }
+    .pictures :nth-child(odd){
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
-	<div class="heading"><h1>Daffodils</h1></div>
-<div class="one">I wandered lonely as a cloud
-That floats on high o'er vales and hills,
-When all at once I saw a crowd,
-A host, of golden daffodils;
-Beside the lake, beneath the trees,
-Fluttering and dancing in the breeze.
-
-
-
-Continuous as the stars that shine
-And twinkle on the milky way,
-They stretched in never-ending line
-Along the margin of a bay:
-Ten thousand saw I at a glance,
-Tossing their heads in sprightly dance.
-
-
-
-The waves beside them danced; but they
-Out-did the sparkling waves in glee:
-A poet could not but be gay,
-In such a jocund company:
-I gazed—and gazed—but little thought
-What wealth the show to me had brought:
-
-
-
-For oft, when on my couch I lie
-In vacant or in pensive mood,
-They flash upon that inward eye
-Which is the bliss of solitude;
-And then my heart with pleasure fills,
-And dances with the daffodils.</div>
+  <div class="grid-container">
+    <div class="header"><h1>Header</h1></div>
+    <div class="nav">Navigation</div>
+    <div class="main">
+      <div class="content">
+        <header><h1>This is the header of the article</h1></header>
+        <p>Hello this is the content which will have great information for you and you will love it</p>
+        <div class="pictures">
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        <p><img src="Pakistan1.png" alt=""></p>
+        </div>
+      </div>
+    </div>
+    <div class="aside1">Aside</div>
+    <div class="aside2">Aside</div>
+    <div class="footer"><h1>Footer</h1></div>
+  </div>
 </body>
 </html>
-
