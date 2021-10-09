@@ -49,32 +49,6 @@
     .content p{
       margin: 10px 0;
     }
-    @media screen and (max-width:700px){
-      .grid-container{
-      display: grid;
-      grid-template: "h h h h h h h h h h h h" minmax(60px , auto)
-                     "h h h h h h h h h h h h" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     "m m m m m m m m m m m m" minmax(60px , auto)
-                     'f f f f f f f f f f f f' minmax(60px , auto)
-                     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .aside1, .aside2{
-      display: none;
-    }
-    .nav{
-      display: none;
-    }
-    }
     .pic-main-div{
       display: flex;
       flex-flow: row nowrap;
@@ -85,12 +59,53 @@
     .pic-sub-div2{
       text-align: right;
     }
+    @media screen and (max-width: 912px){
+      .pic-main-div{
+      flex-flow: row wrap;
+    }
+    .pic-sub-div1, .pic-sub-div2{
+      flex: 100%;
+    }
+    .pic-sub-div2{
+      text-align: left;
+    }
+    }
+    /* start of media query */
+    @media screen and (max-width:500px){
+      .grid-container{
+      display: grid;
+      grid-template: "h h h h h h h h h h h h" minmax(100px, auto)
+                     "m m m m m m m m m m m m" minmax(50px, auto)
+                     'f f f f f f f f f f f f' minmax(150px, auto)
+                     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .pic-main-div{
+      flex-flow: row wrap;
+    }
+    .pic-sub-div1, .pic-sub-div2{
+      flex: 100%;
+    }
+    .pic-sub-div2{
+      text-align: left;
+    }
+    .aside1, .aside2{
+      display: none;
+    }
+    .nav{
+      display: none;
+    }
+    }
+    /* end of media query*/
+    .pic-main-div img{
+      object-fit: cover;
+      object-position: center;
+    }
   </style>
 </head>
 <body>
   <div class="grid-container">
-    <div class="header"><h1>Header</h1></div>
-    <div class="nav">Navigation</div>
+    <div class="header"><h1>Header Section</h1></div>
+    <div class="nav">Navigation Bar</div>
     <div class="main">
       <div class="content">
         <header><h1>This is the header of the article</h1></header>
