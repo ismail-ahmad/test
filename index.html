@@ -75,10 +75,14 @@
       display: none;
     }
     }
-    .pictures{
-      text-align: left;
+    .pic-main-div{
+      display: flex;
+      flex-flow: row nowrap;
     }
-    .pictures :nth-child(odd){
+    .pic-sub-div1, .pic-sub-div2{
+      flex: 50%;
+    }
+    .pic-sub-div2{
       text-align: right;
     }
   </style>
@@ -91,17 +95,27 @@
       <div class="content">
         <header><h1>This is the header of the article</h1></header>
         <p>Hello this is the content which will have great information for you and you will love it</p>
-        <div class="pictures">
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
-        <p><img src="Pakistan1.png" height="70px" width="300px" alt=""></p>
+        <div class="pic-main-div">
+          <div class="pic-sub-div1">
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+            <p><img src="Pakistan1.png" width="300px" height="70px" alt=""></p>
+          </div>
+          <div class="pic-sub-div2">
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+            <p><img src="China1.jpg" width="300px" height="70px" alt=""></p>
+          </div>
         </div>
       </div>
     </div>
