@@ -4,102 +4,168 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CSS Grid Layout</title>
+  <title>Map</title>
+  <script src="https://kit.fontawesome.com/75a786cedb.js" crossorigin="anonymous"></script>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     *{
       padding: 0;
       margin: 0;
       box-sizing: border-box;
     }
-    :root{
-      font: italic small-caps normal 1em calibri;
-      color: black;
+    body{
+      background-image: linear-gradient(to right, rgb(192, 88, 150), rgb(43, 77, 189));
+      background-position: center;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
-    ::selection{
+    .login{
+      height: 50vh;
+      width: 80vw;
+      background-color: rgba(255, 255, 255, 0.308);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      margin: 0 auto;
+      position: relative;
+      top: 50vh;
+      transform: translateY(-60%);
+      z-index: 2;
+      padding: 10px;
+    }
+    p{
+      position: absolute;
+      z-index: -2;
+    }
+    .one, .four{
+      height: 25%;
+      width: 20%;
+      background-color: rgba(255, 255, 255, 0.108);
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+    }
+    .two, .three{
+      height: 15%;
+      width: 10%;
+      background-color: rgba(255, 255, 255, 0.108);
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      border-radius: 5px;
+    }
+    .one{
+      left: -7%;
+      top: -15%;
+    }
+    .four{
+      right: -3%;
+      bottom: -11%;
+    }
+    .two{
+      bottom: -5%;
+      left: -5%;
+    }
+    .three{
+      right: -5%;
+      top: -5%;
+    }
+    /* form Styling */
+    form{
       color: white;
-      background-color: darkblue;
+      display: flex;
+      flex-flow: column nowrap;
+      font: normal 400 1em nunito;
     }
-    .grid-container{
-      display: grid;
-      grid-template: "h h h h h h h h h h h h" minmax(100px, auto)
-                     "n n n n n n n n n n n n" minmax(50px, auto)
-                     "a1 a1 m m m m m m m m a2 a2" minmax(550px, auto)
-                     'f f f f f f f f f f f f' minmax(150px, auto)
-                     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .header{grid-area: h; background-color: lightblue; text-align: center; display:flex; justify-content: center; align-items: center;}
-    .nav{grid-area: n; background-color: lightcoral;}
-    .main{grid-area: m; background-color: lightcyan; }
-    .aside1{grid-area: a1; background-color: lightseagreen; color: white;}
-    .aside2{grid-area: a2; background-color: lightseagreen; color: white;}
-    .footer{grid-area: f; background-color: mediumaquamarine; color: white; text-align: center; display:flex; justify-content: center; align-items: center;}
-    .grid-container > div{
-    }
-    .content{
-      color: initial;
-      font-variant: initial;
-      font-style: initial;
-      padding: 5px;
-      color: rgb(138, 158, 248);
+    input{
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 7px;
+      outline: none;
+      color: white;
     }
     h1{
-      font: italic small-caps normal 32px calibri;
-    }
-    .content p{
-      margin: 10px 0;
-    }
-    .pic-main-div{
-      display: flex;
-      flex-flow: row nowrap;
-    }
-    .pic-sub-div1{
       flex: 100%;
       text-align: center;
+      margin: 8% auto 10% auto;
+      font: 400 2.5em roboto;
     }
-    .pic-main-div img{
-      width: 300px;
-      height: 70px;
+    label{
+      flex: 100%;
     }
-    /* start of media query */
-    @media screen and (max-width:500px){
-      .grid-container{
-      display: grid;
-      grid-template: "h h h h h h h h h h h h" minmax(100px, auto)
-                     "m m m m m m m m m m m m" minmax(550px, auto)
-                     'f f f f f f f f f f f f' minmax(150px, auto)
-                     / 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    input[type="submit"]{
+      color: white;
+      font: 1em nunito;
+      background-image: linear-gradient(to left, rgba(192, 88, 150, 0.5), rgba(43, 77, 189, 0.5));
+      padding: 12px;
+      margin: 8% 0 0 0;
     }
-    .pic-main-div img{
+    input[type="text"]{
+      margin-bottom: 5%;
+    }
+    input[type="text"]:focus, input[type="password"]:focus{
+      border: 1px solid white;
+    }
+    .social{
+      display: flex;
+      flex-flow: row nowrap;
       width: 100%;
-      height: auto;
+      color: white;
+      font: 1em calibri;
+      justify-content: space-between;
+      margin: 5px 0 0 0;
     }
-    .aside1, .aside2{
-      display: none;
+    .social>div{
+      padding: 8px;
+      flex-basis: 49%;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      font: normal 400 1em nunito;
     }
-    .nav{
-      display: none;
+    .social i{
+      margin: 0 8px 0 0;
     }
+    /*@media screen and (min-width:375px) and (max-height:667px){
+      .login{
+        height: 60vh;
+      }
     }
-    /* end of media query*/
+    @media screen and (width:320px) and (height:568px){
+      .login{
+        height: 70vh;
+        margin-top: 20px;
+      }
+    }
+    @media screen and (width:360px) and (height:640px){
+      .login{
+        height: 62vh;
+      }
+    }
+    @media screen and (min-width:577px) and (max-width:768px){
+
+    }*/
+    
   </style>
 </head>
 <body>
-  <div class="grid-container">
-    <div class="header"><h1>Islamic Republic of Pakistan</h1></div>
-    <div class="nav">Navigation Bar</div>
-    <div class="main">
-      <div class="content">
-        <header><h1>A country in Sount-East Asia</h1></header>
-        <div class="pic-main-div">
-          <div class="pic-sub-div1">
-            <p><img src="Pakistan1.png" alt=""></p>
-          </div>
-        </div>
-      </div>
+  <div class="login">
+    <p class="one"></p>
+    <p class="two"></p>
+    <p class="three"></p>
+    <p class="four"></p>
+    <form action="action.php" method="post" autocomplete="off" target="_blank">
+      <h1>Login</h1>
+      <label for="username">Username: </label>
+      <input type="text" name="username" id="username">
+      <label for="Password">Password: </label>
+      <input type="password" name="password" id="password" >
+      <input type="submit" value="Login">
+    </form>
+    <div class="social">
+      <div class="social-go"><i class="fab fa-google"></i>Google</div>
+      <div class="social-fb"><i class="fab fa-facebook"></i>Facebook</div>
     </div>
-    <div class="aside1">Aside</div>
-    <div class="aside2">Aside</div>
-    <div class="footer"><h1>Footer</h1></div>
   </div>
 </body>
 </html>
