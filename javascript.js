@@ -13,5 +13,5 @@ function fun2(){
 	document.getElementById("content").style.border = "hidden" ;
 	
 }
-import PI from "./import.js";
+import PI from "/import.js";
 console.log(PI);
