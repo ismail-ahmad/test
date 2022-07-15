@@ -13,3 +13,5 @@ function fun2(){
 	document.getElementById("content").style.border = "hidden" ;
 	
 }
+const PI = 3.14;
+export {PI};
