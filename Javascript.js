@@ -1,1 +1,2 @@
-document.getElementById("demo").innerHTML = "Hey Hello";
+import name from "./JavascriptE.js";
+document.getElementById("demo").innerHTML = "Hey " + name;
