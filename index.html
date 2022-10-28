@@ -2,7 +2,13 @@
 <html>
     <head>
         <title>Hello World!</title>
-        <style>
+        <meta charset="utf-8">
+        <style >
+            *, *::after, *::before{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
             ::selection{
                 color: rgb(251, 252, 252);
                 background-color: rgba(30, 143, 255, 0.515);
@@ -12,27 +18,73 @@
                 font-weight: normal;
                 font-style: italic;
             }
-            #number{
-                outline: none;
-            }
             #demo{
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: normal;
                 font-size: 16px;
+                color: white;
                 font-style: oblique;
                 border: none;
                 font-size: 16px;
-                padding: 3px;
+                margin-top: 50px;
+            }
+            button:active{
+                top: 42px;
             }
             html{
                 background-color: lightslategrey;
             }
+            button{
+                width: 100px;
+                border: none;
+                background-color: rgb(72, 72, 228);
+                color: white;
+                padding: 5px 0;
+                border-radius: 10px 0px;
+                position: absolute;
+                left: 50%;
+                cursor: pointer;
+                transform: translateX(-50%);
+            }
+            #button2{
+                top: 100px;
+            }
         </style>
     </head>
     <body>
-        <header><h1>MacOS</h1></header>
+        <header><h1>Navigation</h1></header>
+            <button onclick="getLocation()">Try me!</button>
         <p id="demo"></p>
-        <script src="Javascript.js"></script>
-        <script src="JavascriptE.js"></script>
+        <script>
+            let demo = document.getElementById("demo");
+function getLocation() {
+    navigator.geolocation.getCurrentPosition(getPosition, showError);
+}
+function getPosition(position) {
+    document.getElementById("demo").innerHTML =
+    "Latitude: " + position.coords.latitude + "<br>" +
+    "Longitude: " + position.coords.longitude + "<br>" + 
+    position.coords.heading + position.coords.speed + 
+    position.coords.timestamp;
+}
+function showError(error) {
+    switch(error.code) {
+        case error.PERMISSION_DENIED:
+            alert("Permission Denied!");
+        break;
+        case error.TIMEOUT:
+            alert("Timeout!");
+        break;
+        case error.POSITION_UNAVAILABLE:
+            alert("Position Unavailable!");
+        break;
+        case error.UNKNOWN_ERROR:
+            alert("Some Error Occured!")
+        break;
+        default:
+            alert("Everythings Good!")
+    }
+}
+        </script>
     </body>
 </html>
