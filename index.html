@@ -65,7 +65,7 @@ function getPosition(position) {
     document.getElementById("demo").innerHTML =
     "Latitude: " + position.coords.latitude + "<br>" +
     "Longitude: " + position.coords.longitude + "<br>" + 
-    position.coords.heading + position.coords.speed + 
+    position.coords.heading + "<br>" + position.coords.speed + "<br>" +
     position.coords.timestamp;
 }
 function showError(error) {
