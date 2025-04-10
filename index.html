@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --blue: #1E90FF;
+      --dark-blue: #003E7A;
+      --white: #ffffff;
+    }
     *, *::before, *::after{
       padding: 0;
       margin: 0;
@@ -22,25 +27,19 @@
       color: var(--dark-blue);
       font-size: 18px;
     }
-    :root{
-      --blue: #1E90FF;
-      --dark-blue: #003E7A;
-      --white: #ffffff;
-    }
     .logo{
-      height: 44px;
     }
     header > .logo-text{
       font-family: gruppo, sans-serif;
       font-size: 32px;
       height: 58px;
-      line-height: 58px;
+      line-height: 53px;
     }
     h1, h2, h3, h4{
-      font-family: gruppo, sans-serif;
+      font-family: "gruppo", sans-serif;
     }
     .nav-menu li{
-      font-family: lato, sans-serif;
+      font-family: "lato", sans-serif;
       text-align: center;
       padding: 8px 0;
     }
@@ -53,18 +52,38 @@
       align-items: center;
     }
     .nav-menu{
-      display: none;
+      display: flex;
+      flex-flow: column nowrap;
       height: 100vh;
-      width: 100%;      
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: var(--white);
+      transform: translateX(100%);
+      z-index: 990;
+      transition: transform 0.3s ease;
+    }
+    .nav-menu-open{
+      transform: translateX(0);
     }
     .menu-open-button{
-      height: 58px;
     }
     .menu-close-button{
       display: none;
       position: absolute;
       right: 8px;
-      top: 8px;
+      top: 14px;
+    }
+    .menu-close-button-visible{
+      display: block;
+      z-index: 1000;
+    }
+    .no-scroll{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      overflow: hidden;
     }
     header{
       display: flex;
@@ -99,13 +118,13 @@
     <svg class ="menu-open-button" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="var(--dark-blue)"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
   </header>
   <script>
-    let menuOpenButton = document.getElementsByClassName("menu-open-button")[0];
-    let menuCloseButton = document.getElementsByClassName("menu-close-button")[0];
-    let navMenu = document.getElementsByTagName("nav")[0];
-    let logo = document.getElementsByClassName("logo")[0];
-    let logoText = document.getElementsByClassName("logo-text")[0];
-    menuOpenButton.addEventListener("click", function(){navMenu.style.display = "block"; menuCloseButton.style.display = "block"; menuOpenButton.style.display = "none"; logo.style.display = "none"; logoText.style.display = "none";});
-    menuCloseButton.addEventListener("click", function(){logo.style.display = "block"; logoText.style.display = "block"; menuOpenButton.style.display = "block"; navMenu.style.display = "none"; menuCloseButton.style.display = "none";});
+    let menuOpenButton = document.querySelector(".menu-open-button");
+    let menuCloseButton = document.querySelector(".menu-close-button");
+    let html = document.querySelector("html");
+    let navMenu = document.querySelector(".nav-menu");
+
+    menuOpenButton.addEventListener("click", function(){navMenu.classList.add("nav-menu-open"); menuCloseButton.classList.add("menu-close-button-visible"); document.body.classList.add("no-scroll"); });
+    menuCloseButton.addEventListener("click", function(){navMenu.classList.remove("nav-menu-open"); menuCloseButton.classList.remove("menu-close-button-visible"); document.body.classList.remove("no-scroll");});
   </script>
 </body>
 </html>
