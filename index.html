@@ -5,11 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design Gravitas</title>
-  <link rel="stylesheet" href="desktop-styles.css" media="only screen and (min-width:769px)">
-  <link rel="stylesheet" href="larger-screen.css" media="only screen and (min-width:992px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!--<link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" defer>-->
+  <!-- Optimization for PageSpeed Insights -->
   <script>
     window.addEventListener('load', function () {
       const link = document.createElement('link');
@@ -43,9 +41,6 @@
       text-decoration: none;
       color: var(--dark-blue);
     }
-    .header{
-      border-bottom: 1px solid #eee;
-    }
     .nav-menu ul{
       list-style-type: none;
       display: flex;
@@ -66,6 +61,7 @@
       padding: 8px 16px;
       font-family: inherit;
       margin: 0 16px 0 0;
+      border-radius: 0 15px 0 15px;
     }
     @media only screen and (max-width: 768px) {
       .logo-group{
@@ -141,6 +137,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 8px 0 0;
+      border-bottom: 1px solid #eee;
     }
     .logo-group{
       display: flex;
@@ -151,6 +148,8 @@
     }
     }
   </style>
+  <link rel="stylesheet" href="styles/desktop-styles.css" media="only screen and (min-width:769px)">
+  <link rel="stylesheet" href="styles/larger-screen.css" media="only screen and (min-width:992px)">
 </head>
 <body>
   <header>
