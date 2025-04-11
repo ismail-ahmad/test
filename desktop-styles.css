@@ -16,3 +16,6 @@ header{
   .nav-menu li{
     padding: 0 12px 0 12px;
   }
+  header{
+    border-bottom: 1px solid #eee;
+  }
