@@ -16,6 +16,19 @@ header{
   .nav-menu li{
     padding: 0 12px 0 12px;
   }
+  .nav-menu a{
+    position: relative;
+  }
+  .nav-menu a::after:hover{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border-bottom: 1px solid var(--dark-blue);
+  }
   header{
     border-bottom: 1px solid #eee;
   }
