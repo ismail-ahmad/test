@@ -42,7 +42,7 @@ header{
   .nav-menu a{
     position: relative;
   }
-  .nav-menu a::after:hover{
+  .nav-menu a:hover::after{
     content: "";
     display: block;
     position: absolute;
