@@ -36,12 +36,17 @@ header{
     margin: 0 16px 0 0;
     border-radius: 0 15px 0 15px;
     cursor: pointer;
-    box-shadow: 4px 4px 0 hsl(210, 50%, 60%);
+  }
+  .cta-button:hover{
+    position: relative;
+    left: -4px;
+    top: -4px;
+    box-shadow: 4px 4px 0 hsl(210, 80%, 30%);
   }
   .cta-button:active{
     position: relative;
-    left: 4px;
-    top: 4px;
+    left: 0;
+    top: 0;
     box-shadow: 0 0 0;
   }
   .nav-menu li{
