@@ -164,8 +164,8 @@
       menuCloseButton.classList.toggle("menu-close-button-visible", open);
       document.body.classList.toggle("no-scroll", open);
     };
-    menuOpenButton.addEventListener("click", toggle(true));
-    menuCloseButton.addEventListener("click", toggle(false));
+    menuOpenButton.addEventListener("click", () => {toggle(true)} );
+    menuCloseButton.addEventListener("click", () => {toggle(false)} );
   </script>
 </body>
 
