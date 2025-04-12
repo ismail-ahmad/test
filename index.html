@@ -21,6 +21,8 @@
       --blue: #1E90FF;
       --dark-blue: #003E7A;
       --white: #ffffff;
+      --logo-text-font-size-mobile: 22px;
+      --logo-text-font-family: "gruppo", sans-serif;
     }
     *, *::before, *::after{
       padding: 0;
@@ -73,7 +75,8 @@
     .logo{
     }
     header .logo-text{
-      font-size: 24px;      
+      font-size: var(--logo-text-font-size-mobile);
+      font-family: var(--logo-text-font-family);
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
