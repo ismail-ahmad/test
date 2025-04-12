@@ -159,9 +159,13 @@
     let menuCloseButton = document.querySelector(".menu-close-button");
     let html = document.querySelector("html");
     let navMenu = document.querySelector(".nav-menu");
-
-    menuOpenButton.addEventListener("click", function(){navMenu.classList.add("nav-menu-open"); menuCloseButton.classList.add("menu-close-button-visible"); document.body.classList.add("no-scroll"); });
-    menuCloseButton.addEventListener("click", function(){navMenu.classList.remove("nav-menu-open"); menuCloseButton.classList.remove("menu-close-button-visible"); document.body.classList.remove("no-scroll");});
+    let toggle = (open) => {
+      navMenu.classList.toggle("nav-menu-open", open);
+      menuCloseButton.classList.toggle("menu-close-button-visible", open);
+      document.body.classList.toggle("no-scroll", open);
+    };
+    menuOpenButton.addEventListener("click", toggle(true));
+    menuCloseButton.addEventListener("click", toggle(false));
   </script>
 </body>
 
