@@ -35,6 +35,7 @@ header{
       font-family: inherit;
       margin: 0 16px 0 0;
       border-radius: 0 15px 0 15px;
+      cursor: pointer;
     }
   .nav-menu li{
     padding: 0 12px 0 12px;
