@@ -11,7 +11,7 @@ header{
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 0 0 16px;
+    margin: 0 0 0 7px;
   }
 
     .nav-menu ul{
