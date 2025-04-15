@@ -30,19 +30,12 @@ header{
   }
 .nav-menu li{
   padding: 0 12px 0 12px;
+  border: 1px solid rgba(255, 255, 255, 0);
 }
-.nav-menu a{
-  position: relative;
-}
-.nav-menu a:hover::after{
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 100%;
-  border-bottom: 1px solid var(--dark-blue);
+.nav-menu li:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
 }
 .cta-button{
   color: var(--white);
