@@ -9,6 +9,7 @@
     align-items: center;
     background-color: var(--dark-theme-background-color);
     color: var(--white);
+    background-image: var(--blob-tablet);
   
   }
   .hero-section > div{
