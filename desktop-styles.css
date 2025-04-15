@@ -75,6 +75,7 @@ header{
   justify-content: center;
   align-items: center;
   background-color: var(--hero-section-bg-color);
+  background-image: var(--blob-desktop);
   color: var(--white);
 
 }
@@ -84,8 +85,8 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(5px);
-  background-color: var(--dark-theme-background-color);
+  backdrop-filter: var(--hero-backdrop-filter);
+  background-color: transparent;
 }
 .hero-container{
   display: flex;
