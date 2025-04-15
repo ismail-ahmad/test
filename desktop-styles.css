@@ -31,11 +31,15 @@ header{
 .nav-menu li{
   padding: 0 12px 0 12px;
   border: 1px solid rgba(255, 255, 255, 0);
+  font-size: 18px;
 }
 .nav-menu li:hover{
   background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 3px;
+}
+.nav-menu a{
+  font-size: 18px;
 }
 .cta-button{
   color: var(--white);
