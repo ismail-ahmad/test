@@ -74,7 +74,7 @@ header{
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background-color: var(--hero-section-bg-color);
+  background-color: var(--dark-theme-background-color);
   background-image: var(--blob-desktop);
   color: var(--white);
 
