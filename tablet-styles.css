@@ -76,7 +76,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--white);
+    background-color: var(--dark-theme-background-color);
     transform: translateX(100%);
     z-index: 990;
     transition: transform 0.3s ease;
