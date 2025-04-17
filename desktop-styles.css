@@ -141,7 +141,6 @@ header{
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  height: calc(100vh - 167px);
 }
 .service-container .service-heading::before{
   width: 100%;
