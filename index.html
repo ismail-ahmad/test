@@ -99,6 +99,7 @@
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
+      position: relative;
     }
     .service-items {}
     .services h3{
@@ -108,7 +109,6 @@
     .service-container > h3.service-heading {
       padding: 38px 0;
       font-size: var(--h2-font-size-mobile);
-      position: relative;
     }
     .service-items h3{
       font-family: var(--body-text);
@@ -124,8 +124,8 @@
 
     .service-container .service-heading::before{
       content: "";
-      width: 120%;
-      height: 5%;
+      width: 90%;
+      height: 7px;
       position: absolute;
       background-color: rgb(30, 143, 255);
       top: 0;
@@ -261,18 +261,19 @@
       background-image: var(--blob);
     }
     .service-container{
-      min-height: 75vh;
+      height: 100vh;
       justify-content: center;
     }
     .services .first-service-container{
-      min-height: 65vh;
-      justify-content: center;
+      height: calc(100vh - 167px);
     }
     .services .last-service-container{
-      min-height: 90vh;
-      justify-content: center;
+      height: 95vh;
     }
 /* Ending body hero styles here */
+      .service-container .service-heading::before{
+      top: 10vh;
+    }
     }
   </style>
   <link rel="stylesheet" href="tablet-styles.css" media="only screen and (max-width:768px) and (min-width:577px)">
