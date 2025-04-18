@@ -115,3 +115,18 @@
   .cta-button-container{
     display: none;
   }
+  .service-container{
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .services .first-service-container{
+    height: calc(100vh - 167px);
+  }
+  .services .last-service-container{
+    min-height: 95vh;
+    justify-content: center;
+  }
+  .service-container .service-heading::before{
+    top: 10vh;
+  }
