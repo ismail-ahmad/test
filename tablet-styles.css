@@ -125,7 +125,6 @@
   }
   .services .last-service-container{
     min-height: 95vh;
-    justify-content: center;
   }
   .service-container .service-heading::before{
     top: 10vh;
